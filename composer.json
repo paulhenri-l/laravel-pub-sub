@@ -1,6 +1,6 @@
 {
-    "name": "paulhenri-l/laravel-pub-sub-engine",
-    "description": "laravel-pub-sub-engine",
+    "name": "paulhenri-l/laravel-pub-sub",
+    "description": "laravel-pub-sub",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -23,18 +23,18 @@
     },
     "autoload": {
         "psr-4": {
-            "PaulhenriL\\LaravelPubSubEngine\\": "src/"
+            "PaulhenriL\\LaravelPubSub\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "PaulhenriL\\LaravelPubSubEngine\\Tests\\": "tests/"
+            "PaulhenriL\\LaravelPubSub\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "PaulhenriL\\LaravelPubSubEngine\\LaravelPubSubEngineServiceProvider"
+                "PaulhenriL\\LaravelPubSub\\LaravelPubSubServiceProvider"
             ],
             "aliases": {}
         }

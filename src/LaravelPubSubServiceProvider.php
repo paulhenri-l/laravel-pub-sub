@@ -1,10 +1,10 @@
 <?php
 
-namespace PaulhenriL\LaravelPubSubEngine;
+namespace PaulhenriL\LaravelPubSub;
 
 use PaulhenriL\LaravelEngineCore\EngineServiceProvider;
 
-class LaravelPubSubEngineServiceProvider extends EngineServiceProvider
+class LaravelPubSubServiceProvider extends EngineServiceProvider
 {
     /**
      * Register any application services.

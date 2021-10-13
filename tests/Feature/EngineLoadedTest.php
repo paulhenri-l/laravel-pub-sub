@@ -1,9 +1,9 @@
 <?php
 
-namespace PaulhenriL\LaravelPubSubEngine\Tests\Feature;
+namespace PaulhenriL\LaravelPubSub\Tests\Feature;
 
-use PaulhenriL\LaravelPubSubEngine\LaravelPubSubEngineServiceProvider;
-use PaulhenriL\LaravelPubSubEngine\Tests\TestCase;
+use PaulhenriL\LaravelPubSub\LaravelPubSubServiceProvider;
+use PaulhenriL\LaravelPubSub\Tests\TestCase;
 
 class EngineLoadedTest extends TestCase
 {
@@ -11,7 +11,7 @@ class EngineLoadedTest extends TestCase
     {
         $providers = $this->app->getLoadedProviders();
 
-        $engineIsLoaded = $providers[LaravelPubSubEngineServiceProvider::class] ?? false;
+        $engineIsLoaded = $providers[LaravelPubSubServiceProvider::class] ?? false;
 
         $this->assertTrue($engineIsLoaded);
     }

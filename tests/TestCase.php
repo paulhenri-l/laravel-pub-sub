@@ -1,16 +1,16 @@
 <?php
 
-namespace PaulhenriL\LaravelPubSubEngine\Tests;
+namespace PaulhenriL\LaravelPubSub\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
-use PaulhenriL\LaravelPubSubEngine\LaravelPubSubEngineServiceProvider;
+use PaulhenriL\LaravelPubSub\LaravelPubSubServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
     protected function getPackageProviders($app)
     {
         return [
-            LaravelPubSubEngineServiceProvider::class
+            LaravelPubSubServiceProvider::class
         ];
     }
 

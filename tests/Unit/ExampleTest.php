@@ -1,8 +1,8 @@
 <?php
 
-namespace PaulhenriL\LaravelPubSubEngine\Tests\Unit;
+namespace PaulhenriL\LaravelPubSub\Tests\Unit;
 
-use PaulhenriL\LaravelPubSubEngine\Tests\TestCase;
+use PaulhenriL\LaravelPubSub\Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
