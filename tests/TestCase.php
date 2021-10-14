@@ -7,6 +7,16 @@ use PaulhenriL\LaravelPubSub\LaravelPubSubServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
+    protected function resolveApplicationConfiguration($app)
+    {
+        parent::resolveApplicationConfiguration($app);
+
+        $app->make('config')->set('pub_sub.buses', [
+            'bus_1' => ['factory' => 'bus_1_classname'],
+            'bus_2' => ['factory' => 'bus_2_classname'],
+        ]);
+    }
+
     protected function getPackageProviders($app)
     {
         return [

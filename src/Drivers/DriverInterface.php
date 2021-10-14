@@ -1,8 +1,8 @@
 <?php
 
-namespace PaulhenriL\LaravelPubSub\EventBus;
+namespace PaulhenriL\LaravelPubSub\Drivers;
 
-interface EventBusInterface
+interface DriverInterface
 {
     /**
      * Send an even with the given name and payload.

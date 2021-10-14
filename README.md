@@ -8,8 +8,16 @@
 
 ```
 composer require paulhenri-l/laravel-pub-sub
+php artisan laravel-pub-sub:install
 ```
 
 ## Usage
 
-TODO
+### Send
+
+- Register an event bus
+- Dispatch with correct prefix
+
+### Receive
+
+- That is a good question

@@ -2,9 +2,10 @@
 
 namespace PaulhenriL\LaravelPubSub\Tests\Fakes;
 
-use PaulhenriL\LaravelPubSub\EventBus\EventBusInterface;
+use PaulhenriL\LaravelPubSub\Drivers\DriverFactoryInterface;
+use PaulhenriL\LaravelPubSub\Drivers\DriverInterface;
 
-class FakeEventBus implements EventBusInterface
+class FakeDriver implements DriverInterface
 {
     public $events = [];
 

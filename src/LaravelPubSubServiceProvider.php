@@ -4,7 +4,7 @@ namespace PaulhenriL\LaravelPubSub;
 
 use PaulhenriL\LaravelEngineCore\Console\InstallTasks\PublishConfig;
 use PaulhenriL\LaravelEngineCore\EngineServiceProvider;
-use PaulhenriL\LaravelPubSub\Listeners\GlobalEventListener;
+use PaulhenriL\LaravelPubSub\Listeners\PubSubBridge;
 
 class LaravelPubSubServiceProvider extends EngineServiceProvider
 {
@@ -14,15 +14,6 @@ class LaravelPubSubServiceProvider extends EngineServiceProvider
     public function register()
     {
         $this->autoregisterConfig();
-
-        $this->app->bind(GlobalEventListener::class, function ($app) {
-            $config = $app->make('config')->get('pub_sub');
-
-            return new GlobalEventListener(
-                $app->make($config['event_bus']),
-                $config
-            );
-        });
     }
 
     /**
@@ -30,7 +21,18 @@ class LaravelPubSubServiceProvider extends EngineServiceProvider
      */
     public function boot()
     {
+        $busesConfig = config('pub_sub.buses');
+        $router = new EventRouter($this->app, $busesConfig);
+
+        foreach ($busesConfig as $busName => $_) {
+            $this->addListener(
+                "$busName:*",
+                function (string $name, $payload) use ($busName, $router) {
+                    $router->route($busName, $name, $payload);
+                }
+            );
+        }
+
         $this->addInstallCommand(PublishConfig::class);
-        $this->addListener('global:*', GlobalEventListener::class);
     }
 }
