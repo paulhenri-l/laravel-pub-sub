@@ -1,9 +1,9 @@
 <?php
 
-namespace PaulhenriL\LaravelPubSub\Tests\Fakes;
+namespace PaulhenriL\PubSubEngine\Tests\Fakes;
 
-use PaulhenriL\LaravelPubSub\Drivers\DriverFactoryInterface;
-use PaulhenriL\LaravelPubSub\Drivers\DriverInterface;
+use PaulhenriL\PubSubEngine\Drivers\DriverFactoryInterface;
+use PaulhenriL\PubSubEngine\Drivers\DriverInterface;
 
 class FakeDriver implements DriverInterface
 {

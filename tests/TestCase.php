@@ -1,9 +1,9 @@
 <?php
 
-namespace PaulhenriL\LaravelPubSub\Tests;
+namespace PaulhenriL\PubSubEngine\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
-use PaulhenriL\LaravelPubSub\LaravelPubSubServiceProvider;
+use PaulhenriL\PubSubEngine\PubSubEngineServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
 {
@@ -11,7 +11,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     {
         parent::resolveApplicationConfiguration($app);
 
-        $app->make('config')->set('pub_sub.buses', [
+        $app->make('config')->set('pub_sub_engine.buses', [
             'bus_1' => ['factory' => 'bus_1_classname'],
             'bus_2' => ['factory' => 'bus_2_classname'],
         ]);
@@ -20,7 +20,7 @@ class TestCase extends \Orchestra\Testbench\TestCase
     protected function getPackageProviders($app)
     {
         return [
-            LaravelPubSubServiceProvider::class
+            PubSubEngineServiceProvider::class
         ];
     }
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace PaulhenriL\LaravelPubSub;
+namespace PaulhenriL\PubSubEngine;
 
 use Illuminate\Container\Container;
-use PaulhenriL\LaravelPubSub\Drivers\DriverInterface;
+use PaulhenriL\PubSubEngine\Drivers\DriverInterface;
 
 class EventRouter
 {

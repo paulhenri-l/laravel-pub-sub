@@ -1,6 +1,6 @@
 <?php
 
-namespace PaulhenriL\LaravelPubSub\Drivers;
+namespace PaulhenriL\PubSubEngine\Drivers;
 
 use Aws\EventBridge\EventBridgeClient;
 use Illuminate\Support\Arr;

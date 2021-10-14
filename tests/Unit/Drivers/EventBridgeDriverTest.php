@@ -1,11 +1,11 @@
 <?php
 
-namespace PaulhenriL\LaravelPubSub\Tests\Unit\Drivers;
+namespace PaulhenriL\PubSubEngine\Tests\Unit\Drivers;
 
 use Aws\EventBridge\EventBridgeClient;
 use Mockery;
-use PaulhenriL\LaravelPubSub\Drivers\EventBridgeDriver;
-use PaulhenriL\LaravelPubSub\Tests\TestCase;
+use PaulhenriL\PubSubEngine\Drivers\EventBridgeDriver;
+use PaulhenriL\PubSubEngine\Tests\TestCase;
 
 class EventBridgeDriverTest extends TestCase
 {

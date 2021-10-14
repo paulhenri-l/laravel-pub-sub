@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Str;
-use PaulhenriL\LaravelPubSub\Drivers\EventBridgeDriverFactory;
+use PaulhenriL\PubSubEngine\Drivers\EventBridgeDriverFactory;
 
 return [
     /**

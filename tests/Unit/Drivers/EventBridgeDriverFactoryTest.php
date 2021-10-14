@@ -1,10 +1,10 @@
 <?php
 
-namespace PaulhenriL\LaravelPubSub\Tests\Unit\Drivers;
+namespace PaulhenriL\PubSubEngine\Tests\Unit\Drivers;
 
-use PaulhenriL\LaravelPubSub\Drivers\EventBridgeDriver;
-use PaulhenriL\LaravelPubSub\Drivers\EventBridgeDriverFactory;
-use PaulhenriL\LaravelPubSub\Tests\TestCase;
+use PaulhenriL\PubSubEngine\Drivers\EventBridgeDriver;
+use PaulhenriL\PubSubEngine\Drivers\EventBridgeDriverFactory;
+use PaulhenriL\PubSubEngine\Tests\TestCase;
 
 class EventBridgeDriverFactoryTest extends TestCase
 {

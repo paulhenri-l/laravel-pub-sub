@@ -1,11 +1,11 @@
 <?php
 
-namespace PaulhenriL\LaravelPubSub\Tests\Feature;
+namespace PaulhenriL\PubSubEngine\Tests\Feature;
 
 use Illuminate\Support\Facades\Event;
-use PaulhenriL\LaravelPubSub\Tests\Fakes\FakeDriver;
-use PaulhenriL\LaravelPubSub\Tests\Fakes\FakeDriverFactory;
-use PaulhenriL\LaravelPubSub\Tests\TestCase;
+use PaulhenriL\PubSubEngine\Tests\Fakes\FakeDriver;
+use PaulhenriL\PubSubEngine\Tests\Fakes\FakeDriverFactory;
+use PaulhenriL\PubSubEngine\Tests\TestCase;
 
 class EventsSubscriptionTest extends TestCase
 {
