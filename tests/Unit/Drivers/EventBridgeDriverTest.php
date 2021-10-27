@@ -15,7 +15,7 @@ class EventBridgeDriverTest extends TestCase
 
         $mock->shouldReceive('putEvents')->with([
             'Entries' => [[
-                'Detail' => json_encode(['name' => 'world']),
+                'Detail' => ['payload' => json_encode(['name' => 'world'])],
                 'DetailType' => 'some-prefix:hello',
                 'EventBusName' => 'some-bus-name',
                 'Source' => 'some-source',
