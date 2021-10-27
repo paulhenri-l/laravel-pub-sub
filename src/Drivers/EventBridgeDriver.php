@@ -37,7 +37,7 @@ class EventBridgeDriver implements DriverInterface
         $this->eventBridgeClient->putEvents([
             'Entries' => [
                 array_filter([
-                    'Detail' => ['payload' => json_encode($payload)],
+                    'Detail' => json_encode(['payload' => $payload]),
                     'DetailType' => $this->config['prefix'] . $name,
                     'EventBusName' => $this->config['bus_name'],
                     'Source' => $this->config['source'],
